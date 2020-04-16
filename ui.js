@@ -21,7 +21,7 @@ class UI {
         this.humidity.textContent = `Relative humidity: ${weather.current.humidity}`;
         this.feelslike.textContent = `Feels Like: ${weather.current.feelslike_c}`;
         this.pressure.textContent = `Pressure: ${weather.current.pressure_mb}`
-        this.wind.textContent = `Wind speed, km/h: ${weather.current.wind_kph}`
+        this.wind.textContent = `Wind speed, m/sec: ${Math.round(weather.current.wind_kph / 3.6)}`;
         this.winddir.textContent = `Wind direction : ${weather.current.wind_dir}`
         this.updated.textContent = `Last updated : ${weather.current.last_updated}`
     }
